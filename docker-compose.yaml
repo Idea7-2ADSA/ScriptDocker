@@ -2,14 +2,14 @@ version: '3.8'
 
 services:
   app:
-    image: danielrrsilva/idea-java-app:V8
+    image: danielrrsilva/idea-java-app:V9
     container_name: app_container
     depends_on:
       - db
     environment:
       DB_HOST: db
       DB_PORT: 3306
-      DB_NAME: ideadb
+      DB_NAME: ideabd
       DB_USER: root
       DB_PASSWORD: urubu100
       CODIGOTOTEM: ${CODIGOTOTEM}
@@ -21,7 +21,7 @@ services:
     container_name: db_container
     environment:
       MYSQL_ROOT_PASSWORD: urubu100
-      MYSQL_DATABASE: ideadb
+      MYSQL_DATABASE: ideabd
     ports:
       - "3307:3306"
     healthcheck:
