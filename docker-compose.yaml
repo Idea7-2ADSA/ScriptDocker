@@ -2,7 +2,7 @@ version: '3.8'
 
 services:
   app:
-    image: danielrrsilva/idea-java-app:V10
+    image: danielrrsilva/idea-java-app:latest
     container_name: app_container
     depends_on:
       - db
